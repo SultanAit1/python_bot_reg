@@ -1,4 +1,3 @@
-
 from aiogram import types, Dispatcher
 from config import bot, dp, ADMINS
 
@@ -15,7 +14,6 @@ async def echo(message: types.Message):
                 await bot.delete_message(message.chat.id, message.message_id)
                 await message.answer(f"Не матерись {username}, "
                                      f"сам ты {i}!")
-
 
     if message.chat.type != 'private':
         if message.from_user.id in ADMINS:

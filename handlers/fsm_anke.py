@@ -88,7 +88,7 @@ async def cancel_fsm(message: types.Message, state: FSMContext):
         await message.answer('Регистрация отменена')
 
 
-def register_handlers_fsm_anketa(dp: Dispatcher):
+def register_handlers_fsm_anke(dp: Dispatcher):
     dp.register_message_handler(cancel_fsm, state="*", commands=['Отменить регистрацию'])
     dp.register_message_handler(cancel_fsm, Text(equals='Отменить регистрацию', ignore_case=True), state="*")
     dp.register_message_handler(fsm_start, commands=['reg'])

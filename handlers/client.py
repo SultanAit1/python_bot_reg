@@ -1,4 +1,3 @@
-
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import bot, dp
@@ -36,6 +35,7 @@ async def quiz_1(message: types.Message):
         correct_option_id=3,
         reply_markup=markup
     )
+
 
 async def info_handler(message: types.Message):
     await message.reply("Сам рабирайся!")
